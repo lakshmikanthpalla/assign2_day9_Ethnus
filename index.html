@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                    //  function                              //
+        function sum(a,b){
+            document.write(a+b);
+        }
+        sum(5,5);
+
+
+
+
+        let arr1=[1,2,3,5,7,9,10,6,4,3];
+
+
+
+        document.write(arr);
+        document.writeln("<br>");
+        for(let i=0;i<arr1.length;i++){
+            document.writeln(arr1[i]);
+        }
+
+        document.write(arr1.slice(1,4));
+        document.write(arr1.splice(0,2,101,102));
+
+                                    //    arrow  function                           //
+        let tot=0;
+        const sum=(a)=>{
+            for(let i=0;i<a.length;i++){
+                total+=a[i];
+                
+            }
+            return total; 
+        }
+
+
+                        ///////                   forEach                  //
+        arr1.forEach((value)=>{
+            total+=value;
+        })
+        document.writeln(tot);
+
+
+
+
+        document.write(sum(arr));
+
+                        //////   Example                 /////
+
+        let total=1;
+        const mul=(a)=>{
+            for(let i=0;i<a.length;i++){
+                total*=a[i];
+                
+            }
+            return total; 
+        }
+        document.write(mul(arr));
+
+
+        let n=prompt("Enter the number : ");
+        let arr=[];
+        for(let i=0;i<n;i++){
+            arr[i]=i+1;
+        }
+        document.writeln(`arr : [${arr}]`);
+        document.write("<br>");
+
+
+        let Sum=arr.reduce((prv,cur)=>{
+            return prv+cur;
+        })
+        document.write("sum : ",Sum);
+        document.write("<br>");
+
+        let pro=arr.reduce((prev,curr)=>{
+            return prev*curr;
+        })
+        document.write("Product : ",pro);
+        
+    </script>
+</body>
+</html>
